@@ -3,28 +3,23 @@ import styles from './LoginPage.module.css'
 import * as authService from '../../service/authService'
 import { useNavigate } from 'react-router-dom'
 
-
 export default function LoginPage() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const navigate = useNavigate()
 
-
   const handleSubmit = async (e) => {
     e.preventDefault()
     setError('')
 
-
     try {
-      const user = await authService.login({ email, password })
-      console.log('Login bem-sucedido:', user)
-      navigate(`/profile/${user.id}`)
+      const data = await authService.login({ email, password })
+      navigate(`/profile/${data.user.id}`)
     } catch (err) {
       setError(err.message)
     }
   }
-
 
   return (
     <section className={styles.card}>

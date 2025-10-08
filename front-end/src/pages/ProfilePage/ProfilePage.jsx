@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import styles from './ProfilePage.module.css'
+import * as authService from '../../service/authService'
 
 export default function ProfilePage() {
-  const { id } = useParams()
   const navigate = useNavigate()
   const [user, setUser] = useState(null)
   const [error, setError] = useState('')
@@ -12,16 +12,15 @@ export default function ProfilePage() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await fetch(`http://localhost:4000/api/users/${id}`)
-        const data = await res.json()
-        if (!res.ok) throw new Error(data.message || 'Erro ao carregar usuário')
+        const data = await authService.getProfile()
         setUser(data)
       } catch (err) {
         setError(err.message)
+        navigate('/login')
       }
     }
     fetchUser()
-  }, [id])
+  }, [navigate])
 
   const copyReferral = () => {
     if (!user) return
@@ -31,6 +30,7 @@ export default function ProfilePage() {
   }
 
   const handleLogout = () => {
+    authService.logout()
     navigate('/login')
   }
 
