@@ -69,6 +69,7 @@ Instalar as dependências:
 npm install
 
 É necessário criar um banco de dados no PostgreSQL (pgAdmin)
+
 Criar o arquivo ".env" na raiz da pasta "back-end" e colocar as credenciais do banco de dados
 
 Rodar o seguinte comando para a criação das tabelas:
