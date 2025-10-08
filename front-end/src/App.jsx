@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header/Header'
-import RegisterPage from './pages/RegisterPage/RegisterPage'
-import LoginPage from './pages/LoginPage/LoginPage'
+import AuthForm from './pages/AuthForm/AuthForm'
 import ProfilePage from './pages/ProfilePage/ProfilePage'
 
 export default function App() {
@@ -10,8 +9,7 @@ export default function App() {
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<RegisterPage />} />
-          <Route path="/login" element={<LoginPage />} />
+          <Route path="/" element={<AuthForm />} />
           <Route path="/profile/:id" element={<ProfilePage />} />
         </Routes>
       </main>

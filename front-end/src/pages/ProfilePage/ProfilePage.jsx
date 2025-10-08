@@ -31,7 +31,7 @@ export default function ProfilePage() {
 
   const handleLogout = () => {
     authService.logout()
-    navigate('/login')
+    navigate('/')
   }
 
   if (error) return <div className={styles.card}>{error}</div>
