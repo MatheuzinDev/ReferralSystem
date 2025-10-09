@@ -30,12 +30,14 @@ O **Referral System** foi criado com o propósito de demonstrar o funcionamento 
 - 🐘 [PostgreSQL](https://www.postgresql.org/) + [pgAdmin](https://www.pgadmin.org/)
 - 🔒 [bcryptjs](https://www.npmjs.com/package/bcryptjs) para criptografia de senhas
 - 🌐 API RESTful com endpoints para usuários e indicações
+- 🔑 JWT (JSON Web Token) para autenticação e autorização de usuários
 
 ### **Motivos das escolhas**
 - **React**: criação rápida de interfaces dinâmicas e reativas, bem como é a tecnologia que tenho mais afinidade.
 - **Vite**: desempenho superior no desenvolvimento local.  
 - **Express**: simplicidade e robustez na construção de APIs.  
 - **PostgreSQL**: banco de dados relacional confiável e amplamente usado e fácil de ser utilizado.
+- **JWT**: segurança nas rotas privadas, permitindo autenticação stateless e fácil escalabilidade.
 
 ---
 
@@ -77,3 +79,11 @@ npx prisma migrate dev --name init
 
 Iniciar o projeto:
 npm run dev
+
+
+### 🔹 5. Colaboração de IA
+
+- Animações: tirei dúvidas sobre como implementar efeitos visuais, como modais, transições e feedbacks interativos no front-end.
+- Integração Front-end / Back-end: suporte na comunicação entre React e a API em Node.js/Express, incluindo envio de dados e tratamento de erros.
+- Resolução de problemas de codificação: ajuda na identificação e solução de bugs e erros encontrados durante o desenvolvimento.
+- Sugestões de UI/UX: recomendações sobre design, layout, espaçamento e responsividade para uma interface mais intuitiva e agradável.
