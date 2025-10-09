@@ -16,7 +16,7 @@ export default function ProfilePage() {
         setUser(data)
       } catch (err) {
         setError(err.message)
-        navigate('/login')
+        navigate('/')
       }
     }
     fetchUser()
