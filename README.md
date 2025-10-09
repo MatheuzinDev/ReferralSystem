@@ -80,8 +80,9 @@ npx prisma migrate dev --name init
 Iniciar o projeto:
 npm run dev
 
+---
 
-### 🔹 5. Colaboração de IA
+## 🤖 Colaboração com IA
 
 - Animações: tirei dúvidas sobre como implementar efeitos visuais, como modais, transições e feedbacks interativos no front-end.
 - Integração Front-end / Back-end: suporte na comunicação entre React e a API em Node.js/Express, incluindo envio de dados e tratamento de erros.
