@@ -13,9 +13,8 @@
 .tabs {
   display: flex;
   justify-content: center;
-  gap: 60px; /* AUMENTEI o espaço entre Entrar e Registrar */
+  gap: 60px; 
   margin-bottom: 22px;
-  /* border-bottom removido */
 }
 
 .tabButton {
