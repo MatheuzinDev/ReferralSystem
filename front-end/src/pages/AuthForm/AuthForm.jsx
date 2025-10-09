@@ -4,7 +4,7 @@ import * as authService from '../../service/authService'
 import { useNavigate, useLocation } from 'react-router-dom'
 
 export default function AuthForm() {
-  const [activeTab, setActiveTab] = useState('login') // 'login' | 'register'
+  const [activeTab, setActiveTab] = useState('login') 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
