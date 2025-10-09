@@ -48,9 +48,7 @@ export default function AuthForm() {
       await authService.register({ name, email, password, referralLink })
       setActiveTab('login')
     } catch (err) {
-      const message =
-        err.response?.data?.message || 'Erro ao realizar cadastro. Tente novamente.'
-      setError(message)
+      setError(err.message)
     }
   }
 
